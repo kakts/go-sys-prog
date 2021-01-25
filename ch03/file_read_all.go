@@ -9,6 +9,8 @@ import (
 /**
  * テキストファイルから指定したサイズのbyteずつ読み取って、出力用ファイルとstdoutに書き出す。
  * ファイルの終端になるまで続ける
+ *
+ * TODO 書き出し終了時にデータを重複して書き出してします
  */
 func main() {
 	file, err := os.Open("hello.txt")
@@ -34,8 +36,9 @@ func main() {
 	for {
 
 		n, err := file.Read(buffer)
-		fmt.Printf("read: %d byte read completed.", n)
+		fmt.Printf("read: %d byte read completed.\n", n)
 		multiWriter.Write(buffer)
+		fmt.Println("")
 		if n == 0 {
 			fmt.Println("Read 0 byte")
 			break
