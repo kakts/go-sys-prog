@@ -3,3 +3,4 @@
 *.gz
 *.csv
 *.vscode
+!ch03/old.txt
