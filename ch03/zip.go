@@ -26,7 +26,7 @@ func main() {
 		panic(err)
 	}
 
-	err = addToZip("zip_sample1.txt", zipWriter)
+	err = addToZip("zip_sample2.txt", zipWriter)
 	if err != nil {
 		panic(err)
 	}
