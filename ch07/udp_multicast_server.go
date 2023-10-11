@@ -5,6 +5,7 @@ package main
 import (
 	"fmt"
 	"net"
+	"os"
 	"time"
 )
 
@@ -16,6 +17,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	os.Exit(2)
 
 	defer conn.Close()
 
