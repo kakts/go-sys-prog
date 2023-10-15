@@ -31,4 +31,9 @@ func main() {
 	fmt.Printf("  読み書き可能な通常ファイル？ %v\n", info.Mode().IsRegular())
 	fmt.Printf("  Unixのファイルアクセス権限ビット %o\n", info.Mode().Perm())
 	fmt.Printf("  モードのテキスト表現 %v\n", info.Mode().String())
+
+	// q: ファイルの同一性を確認するには？
+	// a: os.SameFile で確認できる
+
+	os.SameFile()
 }
